@@ -11,5 +11,6 @@ The project is centered around building an **online train booking system**, whic
 ```bash
 git clone https://github.com/beylsp/cloud-train-booking-lab.git
 cd cloud-train-booking-lab
+```
 
 **Ready to dive in?** Start with [Chapter 0: Development Setup](00-dev-setup/README.md)!
