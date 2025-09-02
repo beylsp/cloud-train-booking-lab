@@ -16,6 +16,17 @@ To get started:
 
 The dev container in each chapter is self-contained and evolves as the learning project progresses.
 
-## Next Chapter
+## Kubernetes Cluster
 
-Let's get started with [Chapter 1 – Simple gRPC Client/Server](../01-simple-grpc)!
+A local Kubernetes cluster is automatically created using [kind](https://kind.sigs.k8s.io/) whenever the chapter is opened in the dev container.  
+You can verify the installation and see running pods with:
+
+```sh
+kubectl get pods -A
+```
+
+This ensures that the cluster and all necessary tools are ready **each time you reopen the chapter in the container**.
+
+## Next
+
+Move on to [Chapter 1 – Simple gRPC Client/Server](../01-simple-grpc) and start building our first gRPC service!
