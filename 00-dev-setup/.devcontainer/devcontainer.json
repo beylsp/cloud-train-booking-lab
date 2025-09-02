@@ -1,10 +1,13 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "name": "k8s dev",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "features": {
         "ghcr.io/devcontainers/features/go": "1.25",
         "ghcr.io/devcontainers/features/docker-in-docker": "27.5.1",
         "ghcr.io/devcontainers-extra/features/kind:1": "0.29.0",
         "ghcr.io/devcontainers-extra/features/kubectl-asdf": "1.33.4"
     },
-    "postCreateCommand": "kind create cluster -n dev-cluster"
+    "postCreateCommand": "./.devcontainer/setup.sh"
 }
