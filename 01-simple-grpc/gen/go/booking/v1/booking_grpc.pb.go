@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: booking/v1/booking.proto
 
-package bookingv1
+package v1
 
 import (
 	context "context"

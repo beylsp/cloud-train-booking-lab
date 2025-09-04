@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package booking.v1;
 
-option go_package = "01-simple-grpc/protos/booking/v1;bookingv1";
+option go_package = "cloud-train-booking-lab/01-simple-grpc/gen/go/booking/v1";
 
 message CreateBookingRequest {
   string passenger = 1;
