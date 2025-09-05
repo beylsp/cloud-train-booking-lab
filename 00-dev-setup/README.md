@@ -1,4 +1,4 @@
-# Dev Environment
+# 00-dev-setup
 
 This project uses [Dev Containers](https://containers.dev/) for a consistent, containerized development setup.
 

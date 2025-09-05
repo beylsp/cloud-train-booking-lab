@@ -27,4 +27,6 @@ rsync -av \
 
 find "$NEW_DIR" -type f -exec sed -i "s/$OLD_DIR/$NEW_DIR/g" {} + 
 
+echo "# $NEW_DIR" > $NEW_DIR/README.md
+
 echo "Created '$NEW_DIR' from '$OLD_DIR'."
