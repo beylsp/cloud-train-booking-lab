@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	pb "cloud-train-booking-lab/01-simple-grpc/gen/go/booking/v1"
+	bookingv1 "cloud-train-booking-lab/01-simple-grpc/gen/go/booking/v1"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -23,12 +23,12 @@ func main() {
 		log.Fatalf("Did not connect: %v", err)
 	}
 	defer conn.Close()
-	c := pb.NewBookingServiceClient(conn)
+	c := bookingv1.NewBookingServiceClient(conn)
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(5)*time.Second)
 	defer cancel()
 
-	resp, err := c.CreateBooking(ctx, &pb.CreateBookingRequest{
+	resp, err := c.CreateBooking(ctx, &bookingv1.CreateBookingRequest{
 		Passenger:   "John Doe",
 		Departure:   "Vienna",
 		Destination: "Berlin",
