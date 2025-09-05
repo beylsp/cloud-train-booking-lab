@@ -52,12 +52,15 @@ make
 
 ```sh
 ./build/services/booking
+Starting gRPC listener on port :50051
+Received booking request for John Doe (Vienna -> Berlin)
 ```
 
 2. In a new terminal, start the client:
 
 ```sh
 ./build/demo/booking-grpc-client
+Booking confirmed! PNR: PNR-12345, Status: CONFIRMED
 ```
 
 ## Next Steps
