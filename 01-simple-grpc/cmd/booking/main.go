@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	pb "cloud-train-booking-lab/01-simple-grpc/gen/go/booking/v1"
+	bookingv1 "cloud-train-booking-lab/01-simple-grpc/gen/go/booking/v1"
 	"cloud-train-booking-lab/01-simple-grpc/internal/booking"
 
 	"google.golang.org/grpc"
@@ -21,7 +21,7 @@ func main() {
 	}
 
 	s := grpc.NewServer()
-	pb.RegisterBookingServiceServer(s, booking.BookingServer{})
+	bookingv1.RegisterBookingServiceServer(s, &booking.BookingServer{})
 
 	log.Printf("Starting gRPC listener on port " + port)
 	if err := s.Serve(lis); err != nil {

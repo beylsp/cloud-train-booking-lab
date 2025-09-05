@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: booking/v1/booking.proto
 
-package v1
+package bookingv1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -147,8 +147,8 @@ const file_booking_v1_booking_proto_rawDesc = "" +
 	"\x03pnr\x18\x01 \x01(\tR\x03pnr\x12\x16\n" +
 	"\x06status\x18\x02 \x01(\tR\x06status2f\n" +
 	"\x0eBookingService\x12T\n" +
-	"\rCreateBooking\x12 .booking.v1.CreateBookingRequest\x1a!.booking.v1.CreateBookingResponseB\xa1\x01\n" +
-	"\x0ecom.booking.v1B\fBookingProtoP\x01Z8cloud-train-booking-lab/01-simple-grpc/gen/go/booking/v1\xa2\x02\x03BXX\xaa\x02\n" +
+	"\rCreateBooking\x12 .booking.v1.CreateBookingRequest\x1a!.booking.v1.CreateBookingResponseB\xab\x01\n" +
+	"\x0ecom.booking.v1B\fBookingProtoP\x01ZBcloud-train-booking-lab/01-simple-grpc/gen/go/booking/v1;bookingv1\xa2\x02\x03BXX\xaa\x02\n" +
 	"Booking.V1\xca\x02\n" +
 	"Booking\\V1\xe2\x02\x16Booking\\V1\\GPBMetadata\xea\x02\vBooking::V1b\x06proto3"
 
