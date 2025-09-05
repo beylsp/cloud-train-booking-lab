@@ -62,7 +62,7 @@ make
 
 ## Next Steps
 
-In the next chapter we will use **ConnectRPC** to bridge the gap between:
+In the [next chapter](../02-connect-rpc) we will use **ConnectRPC** to bridge the gap between:
 
 - **gRPC services**
 - **HTTP/JSON clients** (cURL, browser, etc.)
