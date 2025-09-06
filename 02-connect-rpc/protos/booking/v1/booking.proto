@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package booking.v1;
+
+option go_package = "cloud-train-booking-lab/02-connect-rpc/gen/go/booking/v1;bookingv1";
+
+message CreateBookingRequest {
+  string passenger = 1;
+  string departure = 2;
+  string destination = 3;
+}
+
+message CreateBookingResponse {
+  string pnr = 1; // booking reference - passenger name record
+  string status = 2;
+}
+
+service BookingService {
+  rpc CreateBooking(CreateBookingRequest) returns (CreateBookingResponse);
+}

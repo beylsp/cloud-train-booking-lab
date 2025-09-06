@@ -3,6 +3,7 @@ module cloud-train-booking-lab
 go 1.25.1
 
 require (
+	connectrpc.com/connect v1.18.1
 	google.golang.org/grpc v1.75.0
 	google.golang.org/protobuf v1.36.8
 )
