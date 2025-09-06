@@ -90,3 +90,7 @@ Send a booking request directly with cURL:
   "status": "CONFIRMED"
 }
 ```
+
+## Next Steps
+
+In the [next chapter](../03-build-ko) we will shift from local binaries into a **real Kubernetes workflow**.

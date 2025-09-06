@@ -42,8 +42,24 @@ message CreateBookingResponse {
 
 ## Build
 
+From the chapter root:
+
+1. Generate code:
+
 ```sh
-make
+make proto
+```
+
+2. Build the Booking service:
+
+```sh
+make services
+```
+
+3. Build the demo:
+
+```sh
+make demo
 ```
 
 ## Run
