@@ -6,6 +6,17 @@ This repository is a **personal learning project** focused on exploring **Kubern
 
 The project is centered around building an **online train booking system**, which serves as the reference application throughout the chapters. This fictional platform includes typical components of a modern distributed system — such as order placement, tracking and notification services.
 
+## Chapter Overview
+
+| Chapter | Title                  | Description                                                        |
+|---------|------------------------|--------------------------------------------------------------------| 
+| 00      | Development Setup      | Devcontainer.                                                      |
+| 01      | gRPC Client and Server | Minimal Booking service with gRPC client and server.               |
+| 02      | ConnectRPC             | Add ConnectRPC to expose BookingService over gRPC and HTTP/JSON.   |
+| 03      | ko.build               | Build and deploy the BookingService into a KinD cluster using ko.  |
+| 04      | MetalLB                | Expose services via LoadBalancer.                                  |
+| 05      | Envoy Gateway          | Add an API Gateway for routing, security and customer-facing APIs. |
+
 ## Getting Started
 
 ```bash
