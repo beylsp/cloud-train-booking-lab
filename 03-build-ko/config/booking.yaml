@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: booking
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking
+  template:
+    metadata:
+      labels:
+        app: booking
+    spec:
+      containers:
+        - name: booking
+          image: ko://cloud-train-booking-lab/03-build-ko/cmd/booking
+          ports:
+            - containerPort: 50051
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: booking-service
+spec:
+  type: ClusterIP
+  selector:
+    app: booking
+  ports:
+    - protocol: TCP
+      port: 50051
+      targetPort: 50051
