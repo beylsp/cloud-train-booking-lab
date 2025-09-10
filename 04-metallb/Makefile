@@ -39,9 +39,9 @@ demo: ## Build demo.
 	@echo "build booking-http-client"
 	@{ \
 		echo '#!/bin/bash' ;\
-		echo 'curl -s -H "Content-Type: application/json" \' ;\
+		echo 'curl --show-error -s -H "Content-Type: application/json" \' ;\
 		echo '     --data '\''{"passenger": "John Doe", "departure": "Paris", "destination": "Amsterdam"}'\'' \' ;\
-		echo '     http://$(SVC_BOOKING_IPv4):50051/booking.v1.BookingService/CreateBooking' ;\
+		echo '     http://$${1:-127.0.0.1}:50051/booking.v1.BookingService/CreateBooking' ;\
 	} > $(BUILD_DIR)/$@/booking-http-client
 	@ echo "[INFO] Booking service listening on $(SVC_BOOKING_IPv4)"
 	@chmod a+x $(BUILD_DIR)/$@/booking-http-client

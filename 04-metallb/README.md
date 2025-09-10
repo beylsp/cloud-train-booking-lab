@@ -81,8 +81,23 @@ kubectl logs -n metallb-system speaker-5gmhz
 {"caller":"main.go:443","event":"serviceAnnounced","ips":["172.19.255.200"],"level":"info","msg":"service has IP, announcing","pool":"kind-pool","protocol":"layer2","ts":"2025-09-09T19:24:53Z"}
 ```
 
-Next
-with metallb as load balancer implementation, we can install a true API gateway: envoy gateway.
+## Run
+
+Provide the assigned service IP address as a command-line argument. It can be retrieved with:
+
+```sh
+kubectl get svc booking-service -o jsonpath="{.status.loadBalancer.ingress[0].ip}"
+172.19.255.200
+
+./build/demo/booking-grpc-client -H 172.19.255.200
+Booking confirmed! PNR: PNR-12345, Status: CONFIRMED
+
+./build/demo/booking-http-client 172.19.255.200 | jq
+{
+  "pnr": "PNR-12345",
+  "status": "CONFIRMED"
+}
+```
 
 ## Next Chapter
 
