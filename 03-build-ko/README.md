@@ -79,6 +79,8 @@ Since the service is running as a `ClusterIP`, it’s only accessible inside the
 kubectl port-forward service/booking-service 50051:50051
 ```
 
+This will set up a TCP tunnel between localhost and the booking service.
+
 Now, in another terminal, you can send requests to the service using either a gRPC client or a plain HTTP client (thanks to ConnectRPC).
 
 ```sh
