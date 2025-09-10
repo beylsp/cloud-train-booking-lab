@@ -16,6 +16,8 @@ The project is centered around building an **online train booking system**, whic
 | 03      | ko.build               | Build and deploy the BookingService into a KinD cluster using ko.  |
 | 04      | MetalLB                | Expose services via LoadBalancer.                                  |
 | 05      | Envoy Gateway          | Add an API Gateway for routing, security and customer-facing APIs. |
+| 06      | Linkerd                | Create a service mesh and add mTLS.                                |
+| 07      | cert-manager           | certificate and PKI management.                                    |
 
 ## Getting Started
 
